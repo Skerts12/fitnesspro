@@ -1,0 +1,111 @@
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/home-bg.jpg'); /* Imagem de fundo do login */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Tela de fundo esmaecida para o popup */
+.popup-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro mais forte */
+    z-index: 1;
+}
+
+/* Estilo do popup de login */
+.login-popup {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semitransparente para o popup */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    width: 400px; /* Popup maior */
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* Título do popup de login */
+.login-popup h1 {
+    color: #32cd32; /* Verde claro */
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+/* Estilo dos inputs */
+input[type="text"], 
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #32cd32;
+    border-radius: 5px;
+    background-color: #333; /* Fundo escuro dos inputs */
+    color: white;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus {
+    outline: none;
+    border-color: #228b22; /* Verde mais escuro no foco */
+}
+
+/* Estilo do botão de login */
+button[type="button"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #32cd32;
+    color: black;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button[type="button"]:hover {
+    background-color: #228b22; /* Verde mais escuro no hover */
+}
+
+/* Estilo do botão para criar uma conta */
+h2 {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Estilo do botão "Criar Conta" */
+button[type="button"].criar-conta {
+    background-color: #555; /* Cor de fundo mais escura */
+    margin-top: 10px;
+}
+
+button[type="button"].criar-conta:hover {
+    background-color: #444; /* Cor de fundo mais escura no hover */
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .login-popup {
+        width: 90%; /* Ajusta o tamanho do popup em telas menores */
+        padding: 30px;
+    }
+
+    .login-popup h1 {
+        font-size: 2rem; /* Ajusta o título em telas menores */
+    }
+}

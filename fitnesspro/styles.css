@@ -1,0 +1,675 @@
+/* styles.css */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #ecf0f1; /* Light text for dark background */
+    background-color: #1d1d1d; /* Dark background color */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f1f1f; /* Darker navbar background */
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #333; /* Subtle border for separation */
+}
+
+.navbar .logo {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 1.5rem;
+}
+
+.navbar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #18bc9c; /* Accent color on hover */
+}
+
+/* Hamburger Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #ecf0f1;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay to enhance text readability */
+}
+
+.hero  div {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    padding: 0.8rem 2rem;
+    background-color: #0ea33b;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    font-weight:bold;
+   
+}
+    
+
+.hero .btn:hover {
+    background-color: #148636;
+}
+
+/* Content Sections */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    background-color: #1b1b1b;
+    text-align: center;
+    transform: translateY(-40px); /* Efeito de elevação no hover */
+    box-shadow: 0 26px 15px rgba(0,0,0,0.7);
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.contactocontainer{
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    background-color: #161616;
+    text-align: center;
+    transform: translateY(-10px); /* Efeito de elevação no hover */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.7);
+}
+
+
+.about{
+     background-color: #121212;
+     
+}
+
+.section {
+    margin-bottom: 4rem;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #3cc948; /* Light color for headings */
+}
+
+.cards {
+    display: flex;
+    
+    gap: 2rem;
+    justify-content: center; /* Centraliza os cards dentro do contêiner */
+    align-items: center; /* Alinha os cards no centro verticalmente */
+    max-width: 1200px; /* Define uma largura máxima para o contêiner */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    padding: 20px;
+}
+
+.card {
+    background-color: #1f1f1f; /* Cor de fundo escura */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    width: 300px; /* Largura fixa do card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Centraliza o conteúdo dentro do card */
+}
+    
+
+
+.card:hover {
+    transform: translateY(-10px); /* Efeito de elevação no hover */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.7);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+    color: #24b44f; /* cor dos titulos dos cards */
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #f2f6f8; /* texto mais claro para a descrição */
+}
+
+
+/* Footer */
+.footer {
+    background-color: #1f1f1f; /* footer com background escuro */
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid #333; /* separaçao mais escura do footer */
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* navegação */
+@media (max-width: 768px) {
+    .navbar ul {
+        
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #1f1f1f;
+    }
+
+    .navbar ul li {
+        margin: 0;
+        border-top: 1px solid #333;
+    }
+
+    .navbar ul li a {
+        display: block;
+        padding: 2rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+/* mostrar menu em mobile */
+.navbar ul.active {
+    display: flex;
+    align-self: center;
+    
+}
+
+/* Button Focus State */
+.btn:focus {
+    outline: 2px solid #18bc9c;
+    outline-offset: 2px;
+}
+
+/* Links Focus State */
+a:focus {
+    outline: 2px solid #18bc9c;
+    outline-offset: 2px;
+}
+
+/* Estilos do botão .btn */
+.btn {
+    padding: 0.8rem 2rem;
+    background-color: #0ea33b;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    font-weight:bold;
+    
+  }
+  
+  .btn:hover {
+    background-color: #18bc9c; /* Cor no hover */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.7);
+  }
+  
+
+
+
+  .obrigado-page {
+    background-color: #121212; /* Fundo preto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura da tela inteira */
+    margin: 0;
+  }
+  
+  .obrigado-container {
+    text-align: center;
+    color: white;
+  }
+  
+  .obrigado-image {
+    max-width: 300px; /* Tamanho da imagem */
+    margin-bottom: 20px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+}
+
+
+
+.contato {
+    background-color: #121212;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+   
+    
+}
+
+.contato h2 {
+    font-size: 2em;
+    color: #3afa74;
+    margin-bottom: 20px;
+}
+
+.contato p {
+    color: #fcfcfc;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.contato-form .input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.contato-form .input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.contato-form input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #363636;
+    transition: border-color 0.3s;
+    
+}
+
+.contato-form input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.contato-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007BFF;
+    color: #363636;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subtexto {
+
+  background-color: #464646;
+  
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px; /* Altura da barra */
+    background-color: #333; /* Cor de fundo da barra */
+    z-index: 1000; /* Mantém a barra acima do conteúdo */
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%; /* Início sem preenchimento */
+    background-color: #2ae663; /* Cor de preenchimento da barra */
+    transition: width 0.2s ease; /* Animação suave */
+}
+
+
+/* Estilo da Galeria */
+.gallery {
+    margin: 4rem 0; /* Espaçamento em volta da galeria */
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    color: #3cd169;
+    margin-bottom: 1rem;
+    transform: translateY(-10px); /* Efeito de elevação no hover */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.7);
+}
+
+.gallery p {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Grid da galeria com CSS Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colunas */
+    grid-template-rows: 1fr 1fr; /* 2 linhas */
+    gap: 1.5rem; /* Espaço entre os itens */
+    justify-items: center; /* Alinha os itens no centro */
+}
+
+/* Estilo de cada item da galeria */
+.gallery-item {
+    position: relative;
+    overflow: hidden; /* Garante que as imagens não saiam do seu limite */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease-in-out; /* Efeito de transformação suave */
+    height: 100%; /* Garante que a altura seja ajustada ao conteúdo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo das imagens */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* A imagem preenche o espaço sem distorcer */
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito de hover nas imagens */
+.gallery-item:hover img {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+/* Efeito de hover no item */
+.gallery-item:hover {
+    transform: translateY(-5px); /* Leve elevação do item ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr; /* Mantém 2 colunas em telas médias */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        max-width: 100%; /* Cada imagem ocupa 100% da largura da tela em dispositivos muito pequenos */
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    }
+}
+
+
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ecf0f1;
+}
+
+.icon-back {
+    width: 6em; /* Define o tamanho do ícone conforme o tamanho do texto */
+    height: 6em;
+    margin-right: 4px; /* Espaço entre o ícone e o texto */
+    cursor: pointer;
+    
+}
+
+/* Estilo para a calculadora */
+.calculator {
+    padding: 3rem 0;
+    background-color: #0a0a0a;
+    text-align: center;
+}
+
+.calculator h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.calculator form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.calculator .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.calculator input, .calculator select {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.calculator button {
+    padding: 0.8rem 2rem;
+    background-color: #0ea33b;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    font-weight:bold;
+}
+
+.calculator button:hover {
+    background-color: #148636;
+}
+
+.results {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.results p {
+    margin: 0.5rem 0;
+}
+
+.h3 {
+    color: #24b44f; 
+}
+
+.aten p{
+
+   color: #e6e5e5;
+}
+
+.hh2{
+   color: #24b44f;
+}
+
+.input-group-textarea{
+
+    text-align: center;
+    
+}
+
+/* Estilo geral */
+.bodytextarea {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Container para centralizar a textarea */
+.containertextarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilos para a textarea */
+textarea {
+    width: 100%;
+    max-width: 400px;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+/* Estilo para a textarea quando está em foco */
+textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    background-color: #f0f8ff;
+}
+
+.h2forca{
+    text-align: center;
+}
+
+.container-forca {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    background-color: #121212;
+    text-align:justify
+}
+
+.border{
+    border-radius: 10px;
+}
+
+.p-forca{
+
+    text-align: left;
+    
+}
+
+
+
+
+.img-gif{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    
+}
+
+.plan-card {
+    background-color: #1f1f1f; /* Cor de fundo escura */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    width: 300px; /* Largura fixa do card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Centraliza o conteúdo dentro do card */
+}
+
